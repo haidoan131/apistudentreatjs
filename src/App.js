@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
 
+import Hook1 from './hook/Hook1';
+import Hook2 from './hook/Hook2';
+import { useState } from 'react';
+import Apibai1 from './hook/Apibai1';
+import Hook3 from './hook/Hook3';
+import "./app.css";
+import Students from './components1/Students';
 function App() {
+  const [show,setShow]=useState(true)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    
+{/*       
+      {
+        show?<Hook3/> :"not show hook1"
+      }
+
+      <button onClick={()=>setShow(!show)}>show</button> */}
+      {/* <Apibai1/> */}
+      <Students/>
     </div>
   );
 }
